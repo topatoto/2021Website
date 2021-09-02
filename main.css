@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Bebas+Neue|Calistoga|Crimson+Text|EB+Garamond|Englebert|Iceberg|Istok+Web|McLaren|Quicksand|Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:ital,wght@1,200&display=swap');
+:root {
+    font-size: 16px;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+}
+
+body{
+    color: black;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    font-family: 'quicksand';
+    font-size: 150%;
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+}
+
+main{
+    margin-left: 5rem;
+    
+}
+h1,h2 {
+  font-family: 'mclaren', cursive;
+  color:#8d0007;
+  font-size: 200%;
+}
+/* Header/Logo Title */
+.header { 
+  padding: 60px;
+  text-align: center;
+  background:	#900000;
+  color: white;
+  font-size: 30px;
+  font-family: 'mclaren', cursive;
+}
+header h1 {
+  color: #ff0000;
+  font-family: 'mclaren';
+  font-size: 400%;
+}
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.nav-item{
+    width: 100%;
+}
+.nav-item:last-child {
+    margin-bottom: auto;
+
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: #b6b6b6;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover{
+    filter: grayscale(50%) opacity(500);
+    background: var(--bg-secondary);
+    color: #ff0000;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover{
+    width: 16rem;
+}
+
+.navbar:hover .link-text{
+    display: block;
+}
+.fa-primary{
+    color: red;
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    /*font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    width: 100;*/
+}
+
+/*.logo svg {
+    transform: rotate(-deg);
+}*/
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+    }
+  
+    .navbar:hover {
+      width: 16rem;
+    }
+  
+    .navbar:hover .link-text {
+      display: inline;
+    }
+  
+  }
+
+/*Hero image code*/
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://live.staticflickr.com/7402/11904486995_457785b895_b.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+img.rounded-corners {
+  border-radius: 30px;
+}
+.filter-red {
+  filter: invert(21%) sepia(98%) saturate(7496%) hue-rotate(0deg) brightness(96%) contrast(115%);
+}
+.h3 {
+  color: #b6b6b6;
+  font-family: 'mclaren';
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+}
