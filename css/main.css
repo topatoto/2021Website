@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Bebas+Neue|Calistoga|Crimson+Text|EB+Garamond|Englebert|Iceberg|Istok+Web|McLaren|Quicksand|Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@300&display=swap');
+/*The above is all the imported fonts*/
+/*This is to do with the navigation bar.*/
+:root {
+    font-size: 16px;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+}
+/*This text is for the about Makoura college text*/
+body{
+    color: black;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    font-family: 'Koh Santepheap';
+    font-size: 150%;
+}
+/*This changes the colour of the scrollbar*/
+::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+}
+/*This allows the items in the page to be spaced so that the navbar on the left does not cover the items*/
+main{
+    margin-left: 5rem;
+}
+
+/*The colour of the subheader*/
+h1,h2 {
+  font-family: 'mclaren', cursive;
+  color:#8d0007;
+  font-size: 200%;
+}
+/* Header/Logo Title */
+.header { 
+  padding: 60px;
+  text-align: center;
+  background:	#900000;
+  color: white;
+  font-size: 30px;
+  font-family: 'mclaren', cursive;
+}
+/*Code of the navigation bar*/
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.nav-item{
+    width: 100%;
+}
+.nav-item:last-child {
+    margin-bottom: auto;
+
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: #b6b6b6;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover{
+    filter: grayscale(50%) opacity(500);
+    background: var(--bg-secondary);
+    color: #ff0000;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover{
+    width: 16rem;
+}
+
+.navbar:hover .link-text{
+    display: block;
+}
+.fa-primary{
+    color: red;
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+    }
+  
+    .navbar:hover {
+      width: 16rem;
+    }
+  
+    .navbar:hover .link-text {
+      display: inline;
+    }
+  
+  }
+
+/*This aligns the text to the center*/
+.wrapper {
+  text-align: center;
+}
